@@ -1,0 +1,2128 @@
+object Form1: TForm1
+  Left = 403
+  Height = 621
+  Top = 166
+  Width = 1014
+  Caption = 'COVID Simulator'
+  ClientHeight = 621
+  ClientWidth = 1014
+  Color = clForm
+  DesignTimePPI = 120
+  LCLVersion = '2.0.12.0'
+  object Splitter2: TSplitter
+    Left = 755
+    Height = 621
+    Top = 0
+    Width = 6
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object PageControl2: TPageControl
+    Left = 761
+    Height = 621
+    Top = 0
+    Width = 253
+    ActivePage = TabSheet3
+    Align = alRight
+    TabIndex = 1
+    TabOrder = 1
+    object TabSheet13: TTabSheet
+      Caption = 'Intro'
+      ClientHeight = 588
+      ClientWidth = 245
+      Font.Quality = fqAntialiased
+      ParentFont = False
+      object Label56: TLabel
+        Left = 0
+        Height = 28
+        Top = 0
+        Width = 245
+        Align = alTop
+        Caption = 'COVID Simlator'
+        Font.Height = -20
+        Font.Quality = fqAntialiased
+        ParentColor = False
+        ParentFont = False
+      end
+      object StaticText1: TStaticText
+        Left = 0
+        Height = 560
+        Top = 28
+        Width = 245
+        Align = alClient
+        Caption = 'COVID Simulator is a simulation program for the COVID-19 pandemic.'#13#10'to show the relationship of each variable'#13#10'S = Susceptible'#13#10'I = Infected'#13#10'Q = Quarantined'#13#10'R = Recovered'#13#10'D = Death'#13#10'C = Carrier'#13#10'V = Vaccinated'#13#10#13#10'How to use. Model(Graph)'#13#10'1.Edit value'#13#10'2.Click Plot Graph'#13#10#13#10'How to use. Simulation'#13#10'go to Tutorial in Simulation tab'#13#10#13#10'*(Sim =  Simulator)'#13#10'*(M = Model)'
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Tab1'
+      ClientHeight = 588
+      ClientWidth = 245
+      object Label1: TLabel
+        Left = 27
+        Height = 28
+        Top = 264
+        Width = 67
+        Caption = 'Factors '
+        Font.Height = -20
+        Font.Quality = fqAntialiased
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 32
+        Height = 23
+        Top = 299
+        Width = 127
+        Caption = 'Susceptible(S) = '
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label7: TLabel
+        Left = 32
+        Height = 23
+        Top = 325
+        Width = 99
+        Caption = 'Infected(I) = '
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label8: TLabel
+        Left = 32
+        Height = 23
+        Top = 351
+        Width = 121
+        Caption = 'Recovered(R) = '
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 16
+        Height = 23
+        Top = 80
+        Width = 82
+        Caption = 'Population'
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object SpinEdit1: TSpinEdit
+        Left = 128
+        Height = 28
+        Top = 75
+        Width = 93
+        MaxValue = 10000
+        MinValue = 10
+        OnChange = SpinEdit1Change
+        ParentFont = False
+        TabOrder = 0
+        Value = 1000
+      end
+      object CheckBox1: TCheckBox
+        Left = 16
+        Height = 24
+        Top = 120
+        Width = 129
+        Caption = 'Lock Down (LQ)'
+        OnChange = CheckBox1Change
+        ParentFont = False
+        TabOrder = 1
+      end
+      object CheckBox2: TCheckBox
+        Left = 16
+        Height = 24
+        Top = 144
+        Width = 133
+        Caption = 'Lock Down (HQ)'
+        OnChange = CheckBox2Change
+        ParentFont = False
+        TabOrder = 2
+      end
+      object CheckBox3: TCheckBox
+        Left = 144
+        Height = 24
+        Top = 176
+        Width = 55
+        Caption = 'Stop'
+        OnChange = CheckBox3Change
+        ParentFont = False
+        TabOrder = 3
+      end
+      object Label9: TLabel
+        Left = 32
+        Height = 23
+        Top = 379
+        Width = 94
+        Caption = 'Carrier(C) = '
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label10: TLabel
+        Left = 32
+        Height = 23
+        Top = 406
+        Width = 124
+        Caption = 'vaccinated(V) = '
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label11: TLabel
+        Left = 32
+        Height = 23
+        Top = 432
+        Width = 115
+        Caption = 'V and C(VC) = '
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label12: TLabel
+        Left = 32
+        Height = 23
+        Top = 459
+        Width = 90
+        Caption = 'Death(D) = '
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object CheckBox6: TCheckBox
+        Left = 16
+        Height = 24
+        Top = 168
+        Width = 83
+        Caption = 'S to Safe'
+        OnChange = CheckBox6Change
+        TabOrder = 4
+      end
+      object Label3: TLabel
+        Left = 16
+        Height = 35
+        Top = 299
+        Width = 10
+        Caption = '-'
+        Color = clLime
+        Font.Color = clLime
+        Font.Height = -25
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label4: TLabel
+        Left = 16
+        Height = 35
+        Top = 325
+        Width = 10
+        Caption = '-'
+        Color = clRed
+        Font.Color = clRed
+        Font.Height = -25
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label5: TLabel
+        Left = 16
+        Height = 35
+        Top = 351
+        Width = 10
+        Caption = '-'
+        Color = clYellow
+        Font.Color = clYellow
+        Font.Height = -25
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label13: TLabel
+        Left = 16
+        Height = 35
+        Top = 379
+        Width = 10
+        Caption = '-'
+        Color = clAqua
+        Font.Color = clAqua
+        Font.Height = -25
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label14: TLabel
+        Left = 16
+        Height = 35
+        Top = 406
+        Width = 10
+        Caption = '-'
+        Color = clPurple
+        Font.Color = clPurple
+        Font.Height = -25
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label15: TLabel
+        Left = 16
+        Height = 35
+        Top = 432
+        Width = 10
+        Caption = '-'
+        Color = 4194432
+        Font.Color = 4194432
+        Font.Height = -25
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label16: TLabel
+        Left = 16
+        Height = 35
+        Top = 456
+        Width = 10
+        Caption = '-'
+        Color = clWhite
+        Font.Color = clWhite
+        Font.Height = -25
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label17: TLabel
+        Left = 16
+        Height = 23
+        Top = 48
+        Width = 101
+        Caption = 'Speed(m/ms)'
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label20: TLabel
+        Left = 27
+        Height = 23
+        Top = 480
+        Width = 126
+        Caption = 'Quarantine(Q) ='
+        Font.Height = -17
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label21: TLabel
+        Left = 16
+        Height = 35
+        Top = 480
+        Width = 10
+        Caption = '-'
+        Color = 33023
+        Font.Color = 33023
+        Font.Height = -25
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Button6: TButton
+        Left = 113
+        Height = 31
+        Top = 208
+        Width = 94
+        Caption = 'Clear Sim'
+        OnClick = Button6Click
+        TabOrder = 5
+      end
+      object FloatSpinEdit5: TFloatSpinEdit
+        Left = 552
+        Height = 28
+        Top = 0
+        Width = 63
+        MaxValue = 1
+        TabOrder = 6
+        Value = 0.9
+      end
+      object Label55: TLabel
+        Left = 32
+        Height = 28
+        Top = 0
+        Width = 165
+        Caption = 'Simulation Control'
+        Font.Height = -20
+        Font.Quality = fqAntialiased
+        ParentColor = False
+        ParentFont = False
+      end
+      object FloatSpinEdit16: TFloatSpinEdit
+        Left = 128
+        Height = 28
+        Top = 43
+        Width = 92
+        MaxValue = 5000
+        OnChange = FloatSpinEdit16Change
+        TabOrder = 7
+        Value = 10
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Tab2'
+      ClientHeight = 588
+      ClientWidth = 245
+      object Label18: TLabel
+        Left = 152
+        Height = 20
+        Top = 440
+        Width = 52
+        Caption = 'Label18'
+        ParentColor = False
+      end
+      object Label19: TLabel
+        Left = 16
+        Height = 20
+        Top = 24
+        Width = 114
+        Caption = 'Death Chance(%)'
+        ParentColor = False
+      end
+      object SpinEdit2: TSpinEdit
+        Left = 144
+        Height = 28
+        Top = 16
+        Width = 63
+        OnChange = SpinEdit2Change
+        TabOrder = 0
+        Value = 1
+      end
+      object CheckBox4: TCheckBox
+        Left = 127
+        Height = 27
+        Top = 368
+        Width = 83
+        Caption = 'Vaccine'
+        Font.Color = clMaroon
+        Font.Height = -17
+        OnChange = CheckBox4Change
+        ParentFont = False
+        TabOrder = 1
+      end
+      object CheckBox5: TCheckBox
+        Left = 64
+        Height = 24
+        Top = 400
+        Width = 146
+        Caption = 'Lock Down C (HQ)'
+        OnChange = CheckBox5Change
+        TabOrder = 2
+      end
+      object CheckGroup1: TCheckGroup
+        Left = 16
+        Height = 283
+        Top = 112
+        Width = 104
+        AutoFill = True
+        Caption = 'CheckGroup1'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.TopBottomSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 1
+        ClientHeight = 258
+        ClientWidth = 100
+        Items.Strings = (
+          'S_Series'
+          'I_Series'
+          'Q_Series'
+          'R_Series'
+          'C_Series'
+          'V_Series'
+          'VC_Series'
+          'D_Series'
+        )
+        TabOrder = 3
+        Data = {
+          080000000202020202020202
+        }
+      end
+    end
+  end
+  object PageControl3: TPageControl
+    Left = 0
+    Height = 621
+    Top = 0
+    Width = 755
+    ActivePage = TabSheet14
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 2
+    object TabSheet14: TTabSheet
+      Caption = 'Models(Graph)'
+      ClientHeight = 588
+      ClientWidth = 747
+      object PageControl1: TPageControl
+        Left = 0
+        Height = 588
+        Top = 0
+        Width = 747
+        ActivePage = TabSheet5
+        Align = alClient
+        ParentFont = False
+        TabIndex = 0
+        TabOrder = 0
+        object TabSheet5: TTabSheet
+          Caption = 'M1(SIR1)'
+          ClientHeight = 555
+          ClientWidth = 739
+          object Panel1: TPanel
+            Left = 0
+            Height = 238
+            Top = 317
+            Width = 739
+            Align = alBottom
+            ClientHeight = 238
+            ClientWidth = 739
+            TabOrder = 0
+            object Image1: TImage
+              Left = 544
+              Height = 48
+              Top = 8
+              Width = 192
+              Align = alCustom
+              Picture.Data = {
+                1754506F727461626C654E6574776F726B47726170686963D803000089504E47
+                0D0A1A0A0000000D49484452000000BF0000002B08000000000C76068F000000
+                0467414D410000B18F0BFC6105000000206348524D00007A26000080840000FA
+                00000080E8000075300000EA6000003A98000017709CBA513C00000002624B47
+                4400FF878FCCBF0000000774494D4507E602100E290866136C13000002E04944
+                415468DEEDD9FD4F1261000770FFADFAD5D66A53ABAD0D4513D6D694F0A5B5B5
+                417156A6A2931F004901AD5C3F94B9B49A382B4D11B4CDC228D3B4D99A22BEA4
+                1EC48B80273C4F2C72C37BAE7B9E01BBB2EEBBB1B167CFBEF7613C777BE0C983
+                873B797F1A20FA218C795708E2F1E1CAC09687A4686D0F57E4778E13C43E0352
+                7E87C66AC647DF12C75C3648DD26E8B1A81670FE8986211B3E7DD7A329FFCB11
+                92AF2A68D8C5CCA0DB709FF0677ADEE3663887487A186324E51F26F2078C0CCE
+                6FCA95DF46D2133188FEC3E95F6BBD3206E1B66B098497402EFCEBDB42FA81BA
+                F9C9A98D4559B572715291F630CCDCDFD02DA43F5CFCD957B27AF722F44747CF
+                A52DAA4CFC3BC361E8DAD05884F487A48FE54A662ADFB20547CBB3F447A423B0
+                62A2CE2AA8BFC43926EB87539567E6ECD9FAA1B18E2E5EA284F5177F811D9AE4
+                1B4A93BDDF55DA7D095C13D41F2EB8F34EFED0F1C27DA1CB5E9AADDF5F78CC05
+                556641FD4555355DD12975B56567BE3D8D9C913F51A685B0F7556EFDBEEE9B83
+                EC5D62DAFA91A4766089E42BEDF1CFE58FF77EC5F8A1EA51B2051C1842FC4CA7
+                FA963D41EE6FA9B55902BFF53336EEAD34877F576AC7F99DB3C80CC41F2CE878
+                707C9ADC5FD38AEAF0FB071F87BF6C1CE7E708EA3FBB002583E4FEB7A72BDF20
+                7E1380BCD9F513FA3FF2F77CF74D22FE938ACA2A9ADC0FB7CCF91F58432175FF
+                005F9E5668B4EC25CAE9BFA76C6CE04953F9D1CB88BFD0587B957CFD27421096
+                F5B106C30AAA9E2F378E9CA088FCF7F503CF7832D0745E87AE9F4F74919BD81F
+                D3522AD90A6B30D086E80EC6E3E5583F720732AF6796BF670FBC46FC9219D8A8
+                25F643EFD0F34DF65846F72F70D3C8B40CEEDFF87400AEBB59F7DFFFFBFB45F4
+                8B7ED12FFA45BFE817FDA2FFAFF30F92F444F7FFFFCFDDF94582A408EF77F446
+                82D884367591FDF3A34E0B3E8666FCF9513B418F55358FF3CFD51BF4D8187426
+                E6D7F9DDCA324968DC65C137A29E55ECF91D60622489FF23E7A787383F0093AA
+                8968588F5B4C0000002574455874646174653A63726561746500323032322D30
+                322D31365431343A34303A35392B30303A3030B258B8F1000000257445587464
+                6174653A6D6F6469667900323032322D30322D31365431343A34303A35392B30
+                303A3030C305004D0000000049454E44AE426082
+              }
+            end
+            object StringGrid1: TStringGrid
+              Left = 48
+              Height = 232
+              Top = 0
+              Width = 408
+              Align = alCustom
+              AutoFillColumns = True
+              ParentFont = False
+              RowCount = 10000
+              TabOrder = 1
+              ColWidths = (
+                80
+                75
+                75
+                75
+                78
+              )
+              Cells = (
+                4
+                0
+                0
+                'Days'
+                1
+                0
+                'S'
+                2
+                0
+                'I'
+                3
+                0
+                'R'
+              )
+            end
+            object Button7: TButton
+              Left = 642
+              Height = 31
+              Top = 64
+              Width = 94
+              Caption = 'Plot Graph'
+              OnClick = Button7Click
+              TabOrder = 0
+            end
+            object SpinEdit3: TSpinEdit
+              Left = 648
+              Height = 28
+              Top = 112
+              Width = 63
+              MaxValue = 10000
+              TabOrder = 2
+              Value = 300
+            end
+            object SpinEdit4: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 72
+              Width = 63
+              MaxValue = 1000000000
+              TabOrder = 3
+              Value = 5000
+            end
+            object SpinEdit5: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 112
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 4
+              Value = 3
+            end
+            object SpinEdit6: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 152
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 5
+            end
+            object FloatSpinEdit1: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 96
+              Width = 63
+              DecimalPlaces = 5
+              Increment = 0.01
+              TabOrder = 6
+              Value = 0.3
+            end
+            object FloatSpinEdit2: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 136
+              Width = 63
+              DecimalPlaces = 5
+              Increment = 0.001
+              TabOrder = 7
+              Value = 0.9
+            end
+            object Label22: TLabel
+              Left = 472
+              Height = 23
+              Top = 77
+              Width = 9
+              Caption = 'S'
+              Color = clLime
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label23: TLabel
+              Left = 472
+              Height = 23
+              Top = 117
+              Width = 5
+              Caption = 'I'
+              Color = clRed
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label24: TLabel
+              Left = 472
+              Height = 23
+              Top = 157
+              Width = 10
+              Caption = 'R'
+              Color = clYellow
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label25: TLabel
+              Left = 584
+              Height = 23
+              Top = 77
+              Width = 9
+              Caption = 'β'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label26: TLabel
+              Left = 584
+              Height = 23
+              Top = 160
+              Width = 9
+              Caption = 'γ'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label27: TLabel
+              Left = 656
+              Height = 23
+              Top = 136
+              Width = 36
+              Caption = 'Days'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label58: TLabel
+              Left = 688
+              Height = 20
+              Top = 184
+              Width = 37
+              Caption = 'width'
+              ParentColor = False
+            end
+            object SpinEdit22: TSpinEdit
+              Left = 673
+              Height = 28
+              Top = 204
+              Width = 63
+              MinValue = 1
+              OnChange = SpinEdit22Change
+              TabOrder = 8
+              Value = 1
+            end
+          end
+          object Chart3: TChart
+            Left = 0
+            Height = 317
+            Top = 0
+            Width = 739
+            AxisList = <            
+              item
+                Marks.LabelBrush.Style = bsClear
+                Minors = <>
+                Title.LabelFont.Orientation = 900
+                Title.LabelBrush.Style = bsClear
+              end            
+              item
+                Alignment = calBottom
+                Marks.LabelBrush.Style = bsClear
+                Minors = <>
+                Title.LabelBrush.Style = bsClear
+              end>
+            BackColor = clBlack
+            Foot.Brush.Color = clBtnFace
+            Foot.Font.Color = clBlue
+            Title.Brush.Color = clBtnFace
+            Title.Font.Color = clBlue
+            Title.Text.Strings = (
+              'TAChart'
+            )
+            Align = alClient
+            object Chart3_S: TLineSeries
+              LinePen.Color = clLime
+            end
+            object Chart3_I: TLineSeries
+              LinePen.Color = clRed
+            end
+            object Chart3_R: TLineSeries
+              LinePen.Color = clYellow
+            end
+          end
+        end
+        object TabSheet6: TTabSheet
+          Caption = 'M2(SIR2)'
+          ClientHeight = 555
+          ClientWidth = 739
+          object Panel2: TPanel
+            Left = 0
+            Height = 238
+            Top = 317
+            Width = 739
+            Align = alBottom
+            ClientHeight = 238
+            ClientWidth = 739
+            TabOrder = 0
+            object Image2: TImage
+              Left = 544
+              Height = 64
+              Top = 0
+              Width = 194
+              Picture.Data = {
+                1754506F727461626C654E6574776F726B47726170686963B204000089504E47
+                0D0A1A0A0000000D49484452000000BE0000003A08000000002B3EBC8F000000
+                0467414D410000B18F0BFC6105000000206348524D00007A26000080840000FA
+                00000080E8000075300000EA6000003A98000017709CBA513C00000002624B47
+                4400FF878FCCBF0000000774494D4507E602100E290866136C13000003BA4944
+                415468DEEDDAD94F13411C0770FF105F7D30F1C527137C3031513C624501A980
+                551A8880050D018F8082489428A08246B41C46434121110C57696D4BC1E00152
+                8F8A20855A080AB1D09B6DBB743CD00833DBCE94DA2D1BFA7D9C4C7FFD7476B6
+                9DD9E93AC0E9AC0B727D37E5E630DF722A29AD21881F20787CB7C14459BEED52
+                F7EE7CCB41BEA3E8F8E952F1CC7EDD54D42007F98A04B374D3136344DCF66B5C
+                9C3C353940B76D6C66AFBA249B8B7C6982B579CBC457DEC42CEF3507F996B369
+                F919399F5327C1F53B1CE403CA609B9F727DA7817D968B7C5612E6AF42BEA54E
+                BCBA724FB6E0077F644F65A8C1CB525D90ECF283FF29DD13EA79B13C43997EF1
+                D35C6055E5835FFC9113415DA6079B2FD9AA0D353810FE838DC3A1062F8F3683
+                F6C69F91C179562F92C26D5D1ADCDDECEEEB92114461C159F59535506A8B63C5
+                709BB889FECD97952AE0B790CB9196E622DCED3077BE93445FF80EC757577DD1
+                41191B875B74DACB8E45BE92E4F2D92B9C981EC6DB44F3E0B106D7A3A79DA40E
+                55FE872F27E96D2EC7F26FD124851AF0FC56923A8E9B6B946F9C60BA0FB8C257
+                098F143B69F9D57AABA165C94A6AE57CD51B16F94E61C7E43EBD22B6B15CA74A
+                5CF26BB212BEE7E74B16C0B94A16F956BE469D6C7E78641E00852040BEF9A201
+                88DF9DBFC7263FBE2E4130359D12D7E25106CA5F487FB020E8BFC02A9FAF75E6
+                960247EBEE86EE40F9A0E9C4C7C37379ACF20F6941C925070D4ACEA902E68FC5
+                9CAC00B97759E4DB2293F3F9830D5905FCBE1E61A0FC795E9411E457FD5FBE49
+                6FF7CEB7C6364AF5C0FCBC631CCCBE5FB28E63E21B290C1F88EA00189DF0CDF7
+                CCE80CC882D93BBF3729A5C0EA956FCFD4330E0703DF95F512C72F6D467A207C
+                87807F341B7EDAE59D9F71D7350A0FDB3FBEC7C8BCF664E03B135438BEC986E7
+                5B0E0E98F6B711F36FC6F421CF25CCE5B8EDEF1C033FB11BE56317CCBD08FF40
+                7B7F4C3F31DF5ECD3B63864BDCB052BEE278AEA920E24B5AD1B5FB928CB7DF6F
+                84F9D6C88311C5701D5FDF3CD3BCA7508BED98F0B8AFA46CD87C16D98F31F1AB
+                A3537DD549DDB15E808C7EF4802AEE3B29DFD9A9E93FD00397B832E46BD07423
+                B7EBCBD0D18F6798FBAFDCBEAEA26BF8951C9D3C6F3D4209299F9688448FE0DB
+                D35C81DB2C9AD0B9EF2EFB80F2FD5F303B8AC7415725DCE87DF2B8512A7EBB32
+                CBF0BD4FA3FBFB95ACF77F95818BAFD9DD56981FE687F9617E981FE687F96B93
+                AF24E9CDE2F37D751B491DEA2F1F3D5D41C3E6E9CACBBCDA1A7CEE14528B675B
+                7292109C6DBD9091145262CFB628BD8E24D31EAEFF25E307B4E1E1983E4C886E
+                0000002574455874646174653A63726561746500323032322D30322D31365431
+                343A34313A30302B30303A303080E298780000002574455874646174653A6D6F
+                6469667900323032322D30322D31365431343A34313A30302B30303A3030F1BF
+                20C40000000049454E44AE426082
+              }
+            end
+            object StringGrid2: TStringGrid
+              Left = 48
+              Height = 232
+              Top = 0
+              Width = 408
+              Align = alCustom
+              AutoFillColumns = True
+              ParentFont = False
+              RowCount = 10000
+              TabOrder = 0
+              ColWidths = (
+                80
+                75
+                75
+                75
+                78
+              )
+              Cells = (
+                4
+                0
+                0
+                'Days'
+                1
+                0
+                'S'
+                2
+                0
+                'I'
+                3
+                0
+                'R'
+              )
+            end
+            object Button8: TButton
+              Left = 642
+              Height = 31
+              Top = 64
+              Width = 94
+              Caption = 'Plot Graph'
+              OnClick = Button8Click
+              TabOrder = 1
+            end
+            object SpinEdit7: TSpinEdit
+              Left = 648
+              Height = 28
+              Top = 112
+              Width = 63
+              MaxValue = 10000
+              TabOrder = 2
+              Value = 300
+            end
+            object SpinEdit8: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 72
+              Width = 63
+              MaxValue = 100000000
+              TabOrder = 3
+              Value = 5000
+            end
+            object SpinEdit9: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 112
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 4
+              Value = 3
+            end
+            object SpinEdit10: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 152
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 5
+            end
+            object FloatSpinEdit3: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 96
+              Width = 63
+              DecimalPlaces = 5
+              Increment = 0.01
+              TabOrder = 6
+              Value = 0.3
+            end
+            object FloatSpinEdit4: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 136
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              TabOrder = 7
+              Value = 0.9
+            end
+            object Label28: TLabel
+              Left = 472
+              Height = 23
+              Top = 77
+              Width = 9
+              Caption = 'S'
+              Color = clLime
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label29: TLabel
+              Left = 472
+              Height = 23
+              Top = 117
+              Width = 5
+              Caption = 'I'
+              Color = clRed
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label30: TLabel
+              Left = 472
+              Height = 23
+              Top = 157
+              Width = 10
+              Caption = 'R'
+              Color = clYellow
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label31: TLabel
+              Left = 584
+              Height = 23
+              Top = 77
+              Width = 9
+              Caption = 'β'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label32: TLabel
+              Left = 584
+              Height = 23
+              Top = 160
+              Width = 9
+              Caption = 'γ'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label33: TLabel
+              Left = 656
+              Height = 23
+              Top = 136
+              Width = 36
+              Caption = 'Days'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object FloatSpinEdit6: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 184
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              TabOrder = 8
+              Value = 1
+            end
+            object Label34: TLabel
+              Left = 584
+              Height = 23
+              Top = 209
+              Width = 10
+              Caption = 'α'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label59: TLabel
+              Left = 688
+              Height = 20
+              Top = 184
+              Width = 37
+              Caption = 'width'
+              ParentColor = False
+            end
+            object SpinEdit23: TSpinEdit
+              Left = 673
+              Height = 28
+              Top = 204
+              Width = 63
+              MinValue = 1
+              OnChange = SpinEdit23Change
+              TabOrder = 9
+              Value = 1
+            end
+          end
+          object Chart4: TChart
+            Left = 0
+            Height = 317
+            Top = 0
+            Width = 739
+            AxisList = <            
+              item
+                Marks.LabelBrush.Style = bsClear
+                Minors = <>
+                Title.LabelFont.Orientation = 900
+                Title.LabelBrush.Style = bsClear
+              end            
+              item
+                Alignment = calBottom
+                Marks.LabelBrush.Style = bsClear
+                Minors = <>
+                Title.LabelBrush.Style = bsClear
+              end>
+            BackColor = clBlack
+            Foot.Brush.Color = clBtnFace
+            Foot.Font.Color = clBlue
+            Title.Brush.Color = clBtnFace
+            Title.Font.Color = clBlue
+            Title.Text.Strings = (
+              'TAChart'
+            )
+            Align = alClient
+            object Chart4_S: TLineSeries
+              LinePen.Color = clLime
+            end
+            object Chart4_I: TLineSeries
+              LinePen.Color = clRed
+            end
+            object Chart4_R: TLineSeries
+              LinePen.Color = clYellow
+            end
+          end
+        end
+        object TabSheet7: TTabSheet
+          Caption = 'M3(SIRD)'
+          ClientHeight = 555
+          ClientWidth = 739
+          object Panel3: TPanel
+            Left = 0
+            Height = 278
+            Top = 277
+            Width = 739
+            Align = alBottom
+            ClientHeight = 278
+            ClientWidth = 739
+            TabOrder = 0
+            object Image3: TImage
+              Left = 536
+              Height = 113
+              Top = 0
+              Width = 201
+              Picture.Data = {
+                1754506F727461626C654E6574776F726B47726170686963F405000089504E47
+                0D0A1A0A0000000D49484452000000C60000007208000000002DABF1E2000000
+                0467414D410000B18F0BFC6105000000206348524D00007A26000080840000FA
+                00000080E8000075300000EA6000003A98000017709CBA513C00000002624B47
+                4400FF878FCCBF0000000774494D4507E602100E290866136C13000004FC4944
+                415478DAEDDBDF4F5B550007F0FD1B3EBB571FF4C19898A8090F0B524BAB8048
+                23A4940E020B53D1442B8C5F639AB5093FE256A11D243CE884D12A45F951D6B4
+                A3804825634E26AE2D5D2B3F4629D0697FB7F7B8F9E0E83977BDB73F6F4F73BE
+                8F27B7E79E4FEFEDBDE7574F8182C829AE1B4018B9678483B102606C564B9B17
+                B066F81E041E854CA59BDFF08F306638CF355D6C352F56F99784871833E41D61
+                C54BD6A517AADFF8219BA7C936A3F13BA015446E09D71B5538337ABA23172AC3
+                461165E1BB3166FC29F9A0BB5AB9FC6138D46CC49801BCCEC8913BE8A1C0F1DF
+                38337213C2C8A72466DC1E52E557868CA9302ED70F73DDF0B85C939D8BA5C090
+                6BB8BE5BA0ACB5A4C418E7BADD505653622826B86E77261847EF7D12E4BAE119
+                60F84B9AB86E37144B0B7DF95306F5EB9C1E8AE142AF012ED3EF329DEAF8A69E
+                4D16C34C156D2887A18C74BFAB86CB5413D1938C60A76E1E3ED53C5262E89F64
+                3AFB6A8F818562AE759FA9A2C9EB0E1B14FB165C62BB7B297092111808B1B9AC
+                CB3AA6237EF99E4D3D40B9C774C494994D3D81017F1CA3DFC7E653666606ABC7
+                1B759599C16A16C2D74F184F12FB8BF6F6C68C11EE178B66C0E1A8DC044C964C
+                30A8292B078C3B15FBE3D2587BCBF860B0F54A9A0CEAF143331611FFC401C328
+                75F7C9A99A27331E6D57D364383BBDA1DEADBA690E182689EA8C226AE49DBF93
+                3EE39F72D361999D1B8634E814AC819DDE33B6F6741940F1C52DA95FC209431C
+                F3979B7D202CBCD9993663B1F2AC06D472F1DB5878B1ADF9FC4E7BDB47F5875D
+                83E9321EBEDC148CD5CF668511DBDE45FAC527AE46A5C1E8052EBDF108589D89
+                19D18328032350B100A8DFE327161106B56773459266042F8BEBA69ECD5891D1
+                7F3D348CEDB3C88B1262443F5D453E8530BC15A26A993759C61FC54E8F13AEFB
+                2923F88C997E1A86838F74EFE1D79F071DA0210C37FF9EBB189E1B6164EC0BBE
+                DC41EA66EE53ADD2304A69188C1DF51F61C601CFB0F4CEDD6419E05E4B09D268
+                B3261A4C9090DBAC47A753E8187D3FDB6D0962BFF1ED28CCF0BC5EFECA005C11
+                9B27959607DF8A0BFC86FA44A97AEEB5EB6C18E07351C27A1A5E7D5E0C8F37DC
+                828D6951D2BF0DFBB475A826005F0DB523E19768E9BB467353F190BB93BAE20C
+                25BCACEBEB5AE4B7F1D6FD70153C286364383B1B641BF0E9CDC8B30B8E0565B8
+                2F228F83543AEA8F7A76806E24590600210A294A6DD884BC36521B6F44A9FFFA
+                C2C932685278A33FC2200CC2200CC2200CC2208C4C32705DDF8867D0AD36A149
+                71B5692695D5A6B98E9161E628BB430C6B7FB44961ED6F5E53A241BE22E6B53F
+                5FC251EEFF790872B5F5C55B779CDD13E486E1A93D208CFC62842DB3568A8AA6
+                5F1BB70C6DE5C0D7A1E5AF7067E884F70118ABC59D3156F4F62C189762CED82C
+                DB34F39C13B833348D0088F55ADC1946E19EA3ECB70909E60C5FD7FB621598F9
+                0C730688BA1E77C702D9F917478E189282788BBBC58CBD721C18BAD3EC8652F9
+                C40821EB385B9AD33790C2ED4CFE852E0B8CDB3264D0A696233B1DD5324F7E33
+                56D8ED08679E52E09691B19911C2200CC2200CC2200CC2208C8C3002435D8A19
+                7843137E8CBD22F5584D3BB40E801F6357E002DBC596F8420C19A50E00A46385
+                C0A0C4D0621B8E0C17587BD3863B63BFE8E30E11BC1D143F46647152FF003E0A
+                3F066D08833008833008833008833008232143CBEA30E6BD86DC3256940E165B
+                EBAC97F29CB13DC862A3E3B07A94D57E59EE185C8430F229FF02579758894454
+                6FDE0000002574455874646174653A63726561746500323032322D30322D3136
+                5431343A34313A30302B30303A303080E298780000002574455874646174653A
+                6D6F6469667900323032322D30322D31365431343A34313A30302B30303A3030
+                F1BF20C40000000049454E44AE426082
+              }
+            end
+            object StringGrid3: TStringGrid
+              Left = 8
+              Height = 272
+              Top = 0
+              Width = 408
+              Align = alCustom
+              AutoFillColumns = True
+              ParentFont = False
+              RowCount = 10000
+              TabOrder = 0
+              ColWidths = (
+                80
+                75
+                75
+                75
+                78
+              )
+              Cells = (
+                5
+                0
+                0
+                'Days'
+                1
+                0
+                'S'
+                2
+                0
+                'I'
+                3
+                0
+                'R'
+                4
+                0
+                'D'
+              )
+            end
+            object Button9: TButton
+              Left = 642
+              Height = 31
+              Top = 117
+              Width = 94
+              Caption = 'Plot Graph'
+              OnClick = Button9Click
+              TabOrder = 1
+            end
+            object SpinEdit11: TSpinEdit
+              Left = 648
+              Height = 28
+              Top = 160
+              Width = 63
+              MaxValue = 10000
+              TabOrder = 2
+              Value = 300
+            end
+            object SpinEdit12: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 120
+              Width = 63
+              MaxValue = 100000000
+              TabOrder = 3
+              Value = 5000
+            end
+            object SpinEdit13: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 160
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 4
+              Value = 3
+            end
+            object SpinEdit14: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 200
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 5
+            end
+            object FloatSpinEdit7: TFloatSpinEdit
+              Left = 576
+              Height = 28
+              Top = 120
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              TabOrder = 6
+              Value = 0.3
+            end
+            object FloatSpinEdit8: TFloatSpinEdit
+              Left = 576
+              Height = 28
+              Top = 160
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              OnChange = Button9Click
+              TabOrder = 7
+              Value = 0.9
+            end
+            object Label35: TLabel
+              Left = 472
+              Height = 23
+              Top = 125
+              Width = 9
+              Caption = 'S'
+              Color = clLime
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label36: TLabel
+              Left = 472
+              Height = 23
+              Top = 165
+              Width = 5
+              Caption = 'I'
+              Color = clRed
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label37: TLabel
+              Left = 472
+              Height = 23
+              Top = 205
+              Width = 10
+              Caption = 'R'
+              Color = clYellow
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label38: TLabel
+              Left = 568
+              Height = 23
+              Top = 125
+              Width = 9
+              Caption = 'β'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label39: TLabel
+              Left = 568
+              Height = 23
+              Top = 165
+              Width = 9
+              Caption = 'γ'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label40: TLabel
+              Left = 656
+              Height = 23
+              Top = 184
+              Width = 36
+              Caption = 'Days'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object FloatSpinEdit9: TFloatSpinEdit
+              Left = 576
+              Height = 28
+              Top = 200
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              OnChange = Button9Click
+              TabOrder = 8
+              Value = 1
+            end
+            object Label41: TLabel
+              Left = 567
+              Height = 23
+              Top = 205
+              Width = 10
+              Caption = 'α'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object FloatSpinEdit10: TFloatSpinEdit
+              Left = 576
+              Height = 28
+              Top = 240
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              OnChange = Button9Click
+              TabOrder = 9
+              Value = 0.02
+            end
+            object Label42: TLabel
+              Left = 567
+              Height = 23
+              Top = 245
+              Width = 10
+              Caption = 'δ'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object SpinEdit15: TSpinEdit
+              Left = 488
+              Height = 28
+              Top = 240
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 10
+            end
+            object Label43: TLabel
+              Left = 472
+              Height = 23
+              Top = 245
+              Width = 12
+              Caption = 'D'
+              Color = clWhite
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label60: TLabel
+              Left = 688
+              Height = 20
+              Top = 224
+              Width = 37
+              Caption = 'width'
+              ParentColor = False
+            end
+            object SpinEdit24: TSpinEdit
+              Left = 673
+              Height = 28
+              Top = 244
+              Width = 63
+              MinValue = 1
+              OnChange = SpinEdit24Change
+              TabOrder = 11
+              Value = 1
+            end
+          end
+          object Chart5: TChart
+            Left = 0
+            Height = 277
+            Top = 0
+            Width = 739
+            AxisList = <            
+              item
+                Marks.LabelBrush.Style = bsClear
+                Minors = <>
+                Title.LabelFont.Orientation = 900
+                Title.LabelBrush.Style = bsClear
+              end            
+              item
+                Alignment = calBottom
+                Marks.LabelBrush.Style = bsClear
+                Minors = <>
+                Title.LabelBrush.Style = bsClear
+              end>
+            BackColor = clBlack
+            Foot.Brush.Color = clBtnFace
+            Foot.Font.Color = clBlue
+            Title.Brush.Color = clBtnFace
+            Title.Font.Color = clBlue
+            Title.Text.Strings = (
+              'TAChart'
+            )
+            Align = alClient
+            object Chart5_S: TLineSeries
+              LinePen.Color = clLime
+            end
+            object Chart5_I: TLineSeries
+              LinePen.Color = clRed
+            end
+            object Chart5_R: TLineSeries
+              LinePen.Color = clYellow
+            end
+            object Chart5_D: TLineSeries
+              LinePen.Color = clWhite
+            end
+          end
+        end
+        object TabSheet8: TTabSheet
+          Caption = 'M4(SIQRD)'
+          ClientHeight = 555
+          ClientWidth = 739
+          object Panel4: TPanel
+            Left = 0
+            Height = 319
+            Top = 236
+            Width = 739
+            Align = alBottom
+            ClientHeight = 319
+            ClientWidth = 739
+            TabOrder = 0
+            object Image4: TImage
+              Left = 472
+              Height = 118
+              Top = 0
+              Width = 265
+              Picture.Data = {
+                1754506F727461626C654E6574776F726B47726170686963C607000089504E47
+                0D0A1A0A0000000D494844520000010B00000077080000000031A93A80000000
+                0467414D410000B18F0BFC6105000000206348524D00007A26000080840000FA
+                00000080E8000075300000EA6000003A98000017709CBA513C00000002624B47
+                4400FF878FCCBF0000000774494D4507E602100E290911145C85000006CE4944
+                415478DAEDDCDB5313571C07F0FE17ED5B9F3BD3E9F4A17DAA0F75EAB433D40A
+                E2080405B544299740AC0AA8808A602B1530C8C51B77CB45D1228CA2044508A2
+                75AA2828100421DC932004020849767F8D8E7AC25966CFC20249D8F39D090367
+                B2BF73F6336737B367377C02341FF289B307E042A11628D402855AA0B888C56C
+                5FCF98B3C7E02A1635EB77CBAE3B7B10CEB768BF637C39551662ADF09E91BA85
+                7A5BC281C08EF29DBA2C8555E216CC6FE57074FD54F957BEEB9E3B79284EB7B0
+                C81A40A584B25093F2BCD42D2036B1C7573E5E12064D9ECEFE2471BA454F7454
+                E9BE2B9A2C9839FA42EA16C0CC81CDCAD800AC8CE42D5C27D402855AA0F0583C
+                57D7AED1DC9F59A4854D1E1C1FB72673F0A7F6455A5843DB616DC616D1BA680B
+                677FDEAF542C4BB070FA0582CB583CF952E5EC41BB8CC5E0BAABCE1EF40AC516
+                B1F0D1FFDEA237B7084F616426DE5470758ED44F5D5E9180E43E22D53117170A
+                A85358602015EAE0EE59BE77F225BCA98AF968517BB1B30D4F473BDED2727C9C
+                D0339BA2E16CC54DC7CD0BA45DE83B21A04E9BF67433A9D0B5622D67334EE9F6
+                C7496F3E5ADC510B995C6C06D122CB28A450573EE91D3AA2D6BB5C265A5C7F28
+                A4CE6CFA0CB2B82D640BEB19B2855E48212DD942D8CA4E19D9A249489D6915B5
+                581E8B1ECDDBBD66DFBF5CC962FE32C82A586802220307998ABD71DAB154D3F2
+                5814398E7AA9166CC3E18853FDAB6BB1AF1802EB5A7FD1DC7AAADB382CD2C26C
+                B1BF6641F1B7280BC6C4C08CE59ED78D67493B2757D522A4E2F68EFEE60DF6A1
+                F47A8AB430440D01FC930191C5A22CE6F63F80EC2AE54580292FCDAA5A84E51C
+                D9729739EF71685827D6A24AC1163D7BE937A6146701C94720A45276D73E883D
+                0EB72357635EA8A15CCE822E52D92DD622F318282ACD3EAFF68AB478E4DB22D3
+                05DCB00F735BCDAA5A04974351A8C10057B7776E1269511E36ED5BF4D26754EC
+                BC30F9EE504172C82453EB35B2AA16411B15DBFF6DDA1D1E70677087C3EE2FC5
+                C2A808578404E541DC357116B0C7E335E895BF2ABCBC5E2DB3456F533F8B3539
+                CE8B920E233083AD06B00E38DC135EC8626480DF02263A6686BB6CA09FE0B7E8
+                6B6C9DE5B5487ABBC860E97A612C89405D722DBAEA9B385774FC166AD9FE287C
+                13078B94FF16F45DC822FB24C162A1702CD882C068F9FE71AC759EC5E5D20FBF
+                19D0E22EC7C2BA53A6DCDAB6288BE85430E157E80E167336C116A78F2F87458B
+                471B9877E1576CF32C2C96050A712C2CB23A08C6ABF35B54FC58308EB759CF98
+                8010811605A43AFDF868F342ED3F0AC3708BA7A442951C0BBFD46AD9FD455930
+                0D72DF1EDC2255AB1FE189E156758A208BCE0C235F1DFDAB829A73D826E991F6
+                1F9743B0D6925ADE4286FBE5790F708BAD3E1EFBF05BB7A4CF1186332319A57F
+                105FE4DF7CEE372AC4A26B136F9DA06D9F7EF717B6C9753FFB1170EC04D69AEB
+                29E71DD086CF7EE658F8DF1DD88C2F78F25A584B2A6F7ADFC31BD37413269E4C
+                D6D7A571E745EA31EEBC386BE6AB33315CA1C18F11A34F62C3F96FF13376A986
+                B7D0E453F525CE31E25B0309F890F8E74543427C0D7E7E5CDAF9A29E3BE79670
+                BE80DEF41855F4DEEEF98DE4F305E7DCC91469419B8B3D1BE6866B39D62ACDFC
+                06D758CB718A0527D4825A500B6A412DA805B5A016D4825A500BF7B7A8AD0686
+                9C3915D122638825D781F63CA2C5596E1DE03441C91352A18A46217B664E4316
+                0F63B332C851254C91BACE4ECE24D7C94C2C21D5D1C772378B3985D7CE3CA425
+                1552C70BD9B3B493968F16D6D746219960495D4F0BAA637C43AAC39A38DBE877
+                D58FE16D633652A1B951410332835B3D1BCF2A5AC517E18B1B5930E12D2BDB81
+                DB5958C689CF554AC562E84064A2116635F955A3E22BBAB9856663F7C09BD9B8
+                E0EC03814352B7E8FB3E500B755EAF8109CD90B885F5F0C9BC2DFDE951F63F73
+                1412B7E8DC3C0ABFE7A862DE5A4448DCE2F92613C45EA8F69E029B2247E21653
+                7BA2D2FCBBCCC1E1B9315F3F93B805184AF3BB014C55676F64CA89F70FD7B885
+                439ADB9658680D5858C39A57B60337B268FEE20FE265B2A8B8AE058B05F43F94
+                721BA56061CAC8C293AD48CEC6DBD206C477E5F216BA9491613C7A4E93F11C71
+                8D6F2D5808FBBE1979ED771171598BE55A075F44A8050AB540A11628D402855A
+                A0500B146A81422D50A8058ADB58B00F8BAF3CE67C71489A161659584AC011FC
+                FEBC342DE6B63782DEF326B57867510F9098442D3E58FC897FC74AAA168D30ED
+                8FFF0F71695A587CE24B95CA49AC559A166C5572FA2D33FE36695A2C1C6A8142
+                2D50A8050AB540A11628D402855AA0500B146A81422D50A8050AB540A1162865
+                52781665F8E04501C939B89CCF35BAAA856DB04748FA2CE2BB72790B67845AA0
+                500B146A81422D50A805CAFF5F9E541B514FB493000000257445587464617465
+                3A63726561746500323032322D30322D31365431343A34313A30302B30303A30
+                3080E298780000002574455874646174653A6D6F6469667900323032322D3032
+                2D31365431343A34313A30302B30303A3030F1BF20C40000000049454E44AE42
+                6082
+              }
+            end
+            object StringGrid4: TStringGrid
+              Left = 0
+              Height = 320
+              Top = 0
+              Width = 400
+              Align = alCustom
+              AutoFillColumns = True
+              ColCount = 6
+              ParentFont = False
+              RowCount = 10000
+              TabOrder = 0
+              ColWidths = (
+                80
+                59
+                59
+                59
+                59
+                59
+              )
+              Cells = (
+                6
+                0
+                0
+                'Days'
+                1
+                0
+                'S'
+                2
+                0
+                'I'
+                3
+                0
+                'Q'
+                4
+                0
+                'R'
+                5
+                0
+                'D'
+              )
+            end
+            object SpinEdit16: TSpinEdit
+              Left = 472
+              Height = 28
+              Top = 123
+              Width = 63
+              MaxValue = 100000000
+              TabOrder = 1
+              Value = 5000
+            end
+            object FloatSpinEdit11: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 123
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              TabOrder = 2
+              Value = 0.3
+            end
+            object SpinEdit17: TSpinEdit
+              Left = 472
+              Height = 28
+              Top = 163
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 3
+              Value = 3
+            end
+            object FloatSpinEdit12: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 163
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              OnChange = Button9Click
+              TabOrder = 4
+              Value = 0.9
+            end
+            object SpinEdit18: TSpinEdit
+              Left = 472
+              Height = 28
+              Top = 240
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 5
+            end
+            object FloatSpinEdit13: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 240
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              OnChange = Button9Click
+              TabOrder = 6
+              Value = 1
+            end
+            object SpinEdit19: TSpinEdit
+              Left = 472
+              Height = 28
+              Top = 280
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 7
+            end
+            object FloatSpinEdit14: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 280
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              OnChange = Button9Click
+              TabOrder = 8
+              Value = 0.02
+            end
+            object Label44: TLabel
+              Left = 551
+              Height = 23
+              Top = 285
+              Width = 10
+              Caption = 'δ'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label45: TLabel
+              Left = 551
+              Height = 23
+              Top = 245
+              Width = 10
+              Caption = 'α'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label46: TLabel
+              Left = 547
+              Height = 23
+              Top = 168
+              Width = 14
+              Caption = 'ω'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label47: TLabel
+              Left = 552
+              Height = 23
+              Top = 128
+              Width = 9
+              Caption = 'β'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object Label48: TLabel
+              Left = 456
+              Height = 23
+              Top = 128
+              Width = 9
+              Caption = 'S'
+              Color = clLime
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label49: TLabel
+              Left = 456
+              Height = 23
+              Top = 168
+              Width = 5
+              Caption = 'I'
+              Color = clRed
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label50: TLabel
+              Left = 456
+              Height = 23
+              Top = 245
+              Width = 10
+              Caption = 'R'
+              Color = clYellow
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label51: TLabel
+              Left = 456
+              Height = 23
+              Top = 285
+              Width = 12
+              Caption = 'D'
+              Color = clWhite
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object Label52: TLabel
+              Left = 640
+              Height = 23
+              Top = 187
+              Width = 36
+              Caption = 'Days'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object SpinEdit20: TSpinEdit
+              Left = 632
+              Height = 28
+              Top = 163
+              Width = 63
+              MaxValue = 10000
+              TabOrder = 9
+              Value = 300
+            end
+            object Label53: TLabel
+              Left = 456
+              Height = 23
+              Top = 205
+              Width = 13
+              Caption = 'Q'
+              Color = 33023
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+              Transparent = False
+            end
+            object SpinEdit21: TSpinEdit
+              Left = 472
+              Height = 28
+              Top = 200
+              Width = 63
+              MaxValue = 1000000
+              TabOrder = 10
+            end
+            object Label54: TLabel
+              Left = 552
+              Height = 23
+              Top = 205
+              Width = 9
+              Caption = 'γ'
+              Font.Height = -17
+              ParentColor = False
+              ParentFont = False
+            end
+            object FloatSpinEdit15: TFloatSpinEdit
+              Left = 560
+              Height = 28
+              Top = 200
+              Width = 63
+              DecimalPlaces = 4
+              Increment = 0.01
+              OnChange = Button9Click
+              TabOrder = 11
+              Value = 0.15
+            end
+            object Button10: TButton
+              Left = 632
+              Height = 31
+              Top = 123
+              Width = 94
+              Caption = 'Plot Graph'
+              OnClick = Button11Click
+              TabOrder = 12
+            end
+            object Label61: TLabel
+              Left = 687
+              Height = 20
+              Top = 264
+              Width = 37
+              Caption = 'width'
+              ParentColor = False
+            end
+            object SpinEdit25: TSpinEdit
+              Left = 672
+              Height = 28
+              Top = 284
+              Width = 63
+              MinValue = 1
+              OnChange = SpinEdit25Change
+              TabOrder = 13
+              Value = 1
+            end
+          end
+          object Chart6: TChart
+            Left = 0
+            Height = 236
+            Top = 0
+            Width = 739
+            AxisList = <            
+              item
+                Marks.LabelBrush.Style = bsClear
+                Minors = <>
+                Title.LabelFont.Orientation = 900
+                Title.LabelBrush.Style = bsClear
+              end            
+              item
+                Alignment = calBottom
+                Marks.LabelBrush.Style = bsClear
+                Minors = <>
+                Title.LabelBrush.Style = bsClear
+              end>
+            BackColor = clBlack
+            Foot.Brush.Color = clBtnFace
+            Foot.Font.Color = clBlue
+            Title.Brush.Color = clBtnFace
+            Title.Font.Color = clBlue
+            Title.Text.Strings = (
+              'TAChart'
+            )
+            Align = alClient
+            object Chart6_S: TLineSeries
+              LinePen.Color = clLime
+            end
+            object Chart6_I: TLineSeries
+              LinePen.Color = clRed
+            end
+            object Chart6_Q: TLineSeries
+              LinePen.Color = 33023
+            end
+            object Chart6_R: TLineSeries
+              LinePen.Color = clYellow
+            end
+            object Chart6_D: TLineSeries
+              LinePen.Color = clWhite
+            end
+          end
+        end
+      end
+    end
+    object TabSheet15: TTabSheet
+      Caption = 'Simulation'
+      ClientHeight = 588
+      ClientWidth = 747
+      object PageControl4: TPageControl
+        Left = 0
+        Height = 588
+        Top = 0
+        Width = 747
+        ActivePage = TabSheet2
+        Align = alClient
+        TabIndex = 0
+        TabOrder = 0
+        object TabSheet2: TTabSheet
+          Caption = 'Tutorial'
+          ClientHeight = 555
+          ClientWidth = 739
+          object Label57: TLabel
+            Left = 40
+            Height = 495
+            Top = 16
+            Width = 576
+            Caption = '1.Click Start COVID'#13#10'Hold LeftClick to Rotate'#13#10'Hold RightClick to ZoomIn-Out'#13#10'Hold Middle to Move'#13#10#13#10'-Select Graph''s Tabsheet on the top left'#13#10' to see graph of simulation'#13#10'-Select Tab1 on the top right'#13#10' to Control the simulator'#13#10#13#10'2.Before Change Sim click Clear sim first'
+            Font.Height = -33
+            ParentColor = False
+            ParentFont = False
+          end
+        end
+        object TabSheet16: TTabSheet
+          Caption = 'SIR1 Sim'
+          ClientHeight = 555
+          ClientWidth = 739
+          object OpenGLControl2: TOpenGLControl
+            Left = 0
+            Height = 555
+            Top = 0
+            Width = 739
+            Align = alClient
+            AutoResizeViewport = True
+            OnMouseDown = OpenGLControl1MouseDown
+            OnMouseMove = OpenGLControl1MouseMove
+            OnMouseUp = OpenGLControl1MouseUp
+            OnPaint = OpenGLControl2Paint
+            OnResize = OpenGLControl1Resize
+          end
+          object Button11: TButton
+            Left = 640
+            Height = 31
+            Top = 514
+            Width = 94
+            Anchors = [akRight, akBottom]
+            Caption = 'Start COVID'
+            OnClick = Button2Click
+            TabOrder = 1
+          end
+        end
+        object TabSheet17: TTabSheet
+          Caption = 'SIR2 Sim'
+          ClientHeight = 521
+          ClientWidth = 739
+          object OpenGLControl3: TOpenGLControl
+            Left = 0
+            Height = 521
+            Top = 0
+            Width = 739
+            Align = alClient
+            AutoResizeViewport = True
+            OnMouseDown = OpenGLControl1MouseDown
+            OnMouseMove = OpenGLControl1MouseMove
+            OnMouseUp = OpenGLControl1MouseUp
+            OnPaint = OpenGLControl3Paint
+            OnResize = OpenGLControl1Resize
+          end
+          object Button12: TButton
+            Left = 640
+            Height = 31
+            Top = 480
+            Width = 94
+            Anchors = [akRight, akBottom]
+            Caption = 'Start COVID'
+            OnClick = Button3Click
+            TabOrder = 1
+          end
+        end
+        object TabSheet18: TTabSheet
+          Caption = 'SIRD Sim'
+          ClientHeight = 580
+          ClientWidth = 739
+          object OpenGLControl4: TOpenGLControl
+            Left = 0
+            Height = 580
+            Top = 0
+            Width = 739
+            Align = alClient
+            AutoResizeViewport = True
+            OnMouseDown = OpenGLControl1MouseDown
+            OnMouseMove = OpenGLControl1MouseMove
+            OnMouseUp = OpenGLControl1MouseUp
+            OnPaint = OpenGLControl4Paint
+            OnResize = OpenGLControl1Resize
+          end
+          object Button13: TButton
+            Left = 640
+            Height = 31
+            Top = 539
+            Width = 94
+            Anchors = [akRight, akBottom]
+            Caption = 'Start COVID'
+            OnClick = Button4Click
+            TabOrder = 1
+          end
+        end
+        object TabSheet19: TTabSheet
+          Caption = 'SIQRD Sim'
+          ClientHeight = 555
+          ClientWidth = 739
+          object OpenGLControl5: TOpenGLControl
+            Left = 0
+            Height = 555
+            Top = 0
+            Width = 739
+            Align = alClient
+            AutoResizeViewport = True
+            OnMouseDown = OpenGLControl1MouseDown
+            OnMouseMove = OpenGLControl1MouseMove
+            OnMouseUp = OpenGLControl1MouseUp
+            OnPaint = OpenGLControl5Paint
+            OnResize = OpenGLControl1Resize
+          end
+          object Button14: TButton
+            Left = 640
+            Height = 31
+            Top = 514
+            Width = 94
+            Anchors = [akRight, akBottom]
+            Caption = 'Start COVID'
+            OnClick = Button5Click
+            TabOrder = 1
+          end
+        end
+        object TabSheet9: TTabSheet
+          Caption = 'SIRCVD Sim'
+          ClientHeight = 521
+          ClientWidth = 739
+          object OpenGLControl1: TOpenGLControl
+            Left = 0
+            Height = 521
+            Top = 0
+            Width = 739
+            Align = alClient
+            AutoResizeViewport = True
+            OnMouseDown = OpenGLControl1MouseDown
+            OnMouseMove = OpenGLControl1MouseMove
+            OnMouseUp = OpenGLControl1MouseUp
+            OnPaint = OpenGLControl1Paint
+            OnResize = OpenGLControl1Resize
+          end
+          object Button2: TButton
+            Left = 640
+            Height = 32
+            Top = 480
+            Width = 94
+            Anchors = [akRight, akBottom]
+            Caption = 'Start COVID'
+            OnClick = Button1Click
+            ParentFont = False
+            TabOrder = 1
+          end
+        end
+      end
+    end
+    object TabSheet1: TTabSheet
+      Caption = 'Graph'
+      ClientHeight = 613
+      ClientWidth = 747
+      object Chart1: TChart
+        Left = 0
+        Height = 434
+        Top = 6
+        Width = 747
+        AxisList = <        
+          item
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+            Title.LabelBrush.Style = bsClear
+          end        
+          item
+            Alignment = calBottom
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelBrush.Style = bsClear
+          end>
+        BackColor = clBlack
+        Foot.Brush.Color = clBtnFace
+        Foot.Font.Color = clBlue
+        Title.Brush.Color = clBtnFace
+        Title.Font.Color = clBlue
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        Align = alClient
+        Color = clNone
+        object ISeries: TLineSeries
+          LinePen.Color = clRed
+        end
+        object RSeries: TLineSeries
+          LinePen.Color = clYellow
+        end
+        object DSeries: TLineSeries
+          LinePen.Color = clGray
+        end
+        object SSeries: TLineSeries
+          LinePen.Color = clLime
+        end
+        object VSeries: TLineSeries
+          LinePen.Color = 13107400
+        end
+        object CSeries: TLineSeries
+          LinePen.Color = clAqua
+        end
+        object VCSeries: TLineSeries
+          LinePen.Color = clPurple
+        end
+        object QSeries: TLineSeries
+          LinePen.Color = 4227327
+        end
+      end
+      object Chart2: TChart
+        Left = 0
+        Height = 173
+        Top = 440
+        Width = 747
+        AxisList = <        
+          item
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+            Title.LabelBrush.Style = bsClear
+          end        
+          item
+            Alignment = calBottom
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelBrush.Style = bsClear
+          end>
+        BackColor = clBlack
+        Foot.Brush.Color = clBtnFace
+        Foot.Font.Color = clBlue
+        Title.Brush.Color = clBtnFace
+        Title.Font.Color = clBlue
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        Align = alBottom
+        Color = clNone
+        object ISeries1: TLineSeries
+          LinePen.Color = clPurple
+        end
+        object RSeries1: TLineSeries
+          LinePen.Color = clYellow
+        end
+        object SSeries1: TLineSeries
+          LinePen.Color = clLime
+        end
+        object QSeries1: TLineSeries
+          LinePen.Color = 4227327
+        end
+        object DSeries1: TLineSeries
+          LinePen.Color = 11776947
+        end
+        object VSeries1: TLineSeries
+        end
+        object CSeries1: TLineSeries
+        end
+        object VCSeries1: TLineSeries
+        end
+      end
+      object Splitter3: TSplitter
+        Cursor = crVSplit
+        Left = 0
+        Height = 6
+        Top = 0
+        Width = 747
+        Align = alTop
+        ResizeAnchor = akTop
+      end
+    end
+  end
+  object Timer1: TTimer
+    Interval = 1
+    OnTimer = Timer1Timer
+    Left = 952
+    Top = 560
+  end
+end
